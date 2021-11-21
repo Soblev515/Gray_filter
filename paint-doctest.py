@@ -10,7 +10,7 @@ def circle_area(radius):
     >>> circle_area(3)
     28.274333882308138
     """
-    return math.pi * radius * radius
+    return math.pi * float(radius) * float(radius)
 
 def rectangle_area(width, height):
     """
@@ -100,18 +100,18 @@ def area_factory(figure, *args):
     """
     Return figure area
     :param figure: name figure
-    :param *args: arguments figure
+    :param *args: list arguments figure
     :return: area figure
-    >>> area_factory("Круг, 3")
-    5
-    >>> area_factory("Прямоугольник, 4 5")
-    30
-    >>> area_factory("Квадрат, 5, 3")
-    30
-    >>> area_factory("Треугольник, 6 2 10, 4")
-    30
-    >>> area_factory("Параллелограмм, 5 3 10, 2")
-    30
+    >>> area_factory("Круг", 3)
+    28.274333882308138
+    >>> area_factory("Прямоугольник", 4, 5)
+    20
+    >>> area_factory("Квадрат", 5)
+    25
+    >>> area_factory("Треугольник", 6, 2, 10)
+    1.041889066001582
+    >>> area_factory("Параллелограмм", 5, 3, 10)
+    2.6047226650039548
     """
     if figure == 'Круг':
         return circle_area(*args)
