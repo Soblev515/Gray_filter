@@ -15,7 +15,7 @@ class Filter():
         res.save("output2.jpg")
 
     def StartFilter(self):
-        self.arr = np.array(Image.open("input.py"))
+        self.arr = np.array(Image.open("input.jpg"))
         self.mosaic_size = 10
         self.grayscale = 50
 
