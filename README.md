@@ -11,7 +11,9 @@
 До преоброзований в filter.py:
 
 ![atl text](Pic/b1.png)
+
 После преобразований в filter_with_filename.py, избавлены от консольного ввода:
+
 ![alt text](Pic/b2.png)
 
 Результат работы профилирования filter_with_filename.py - 0.521 сек. 
