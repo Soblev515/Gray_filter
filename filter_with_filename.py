@@ -12,12 +12,12 @@ class Filter():
 
     def __SaveResult(self):
         res = Image.fromarray(self.arr)
-        res.save(input("Введите новое название изображения: "))
+        res.save("output2.jpg")
 
     def StartFilter(self):
-        self.arr = np.array(Image.open(input("Введите название изображение: ")))
-        self.mosaic_size = int(input("Введите размер мозайки: "))
-        self.grayscale = int(input("Введите размер шага градации серого: "))
+        self.arr = np.array(Image.open("input.py"))
+        self.mosaic_size = 10
+        self.grayscale = 50
 
         height, width = len(self.arr), len(self.arr[1])
         for y in range(0, height, self.mosaic_size):
